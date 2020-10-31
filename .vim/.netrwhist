@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/a18706552/Coding/screen_saver_demo'
+let g:netrw_dirhist_4='/Users/a18706552/Coding/screen_saver_demo/app'
+let g:netrw_dirhist_3='/Users/a18706552/Coding/screen_saver_demo/app/src'
+let g:netrw_dirhist_2='/Users/a18706552/Coding/screen_saver_demo/app'
+let g:netrw_dirhist_1='/Users/a18706552/Coding/screen_saver_demo'

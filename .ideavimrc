@@ -1,0 +1,5 @@
+imap jk <Esc>
+
+map ccs :action ChangeColorScheme<CR>
+map rfc :action ReformatCode<CR>
+

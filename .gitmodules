@@ -1,0 +1,42 @@
+[submodule ".vim/pack/plugins/start/nerdtree"]
+	path = .vim/pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/plugins/start/fzf.vim"]
+	path = .vim/pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule ".vim/pack/plugins/start/ack.vim"]
+	path = .vim/pack/plugins/start/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule ".vim/pack/plugins/start/jummidark.vim"]
+	path = .vim/pack/plugins/start/jummidark.vim
+	url = https://github.com/jcherven/jummidark.vim.git
+[submodule ".vim/pack/plugins/start/vim-colors-solarized"]
+	path = .vim/pack/plugins/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/pack/plugins/start/lightline.vim"]
+	path = .vim/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule ".vim/pack/plugin/start/nerdcommenter"]
+	path = .vim/pack/plugin/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule ".vim/pack/plugin/start/nerdtree"]
+	path = .vim/pack/plugin/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/plugin/start/lightline.vim"]
+	path = .vim/pack/plugin/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule ".vim/pack/plugin/start/fzf.vim"]
+	path = .vim/pack/plugin/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule ".vim/pack/plugin/start/ack.vim"]
+	path = .vim/pack/plugin/start/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule ".vim/pack/plugin/start/jummidark.vim"]
+	path = .vim/pack/plugin/start/jummidark.vim
+	url = https://github.com/jcherven/jummidark.vim.git
+[submodule ".zsh/pure"]
+	path = .zsh/pure
+	url = https://github.com/sindresorhus/pure.git
+[submodule ".zsh/zsh-syntax-highlighting"]
+	path = .zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
