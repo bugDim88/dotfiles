@@ -43,3 +43,6 @@
 [submodule ".vim/pack/plugin/start/kotlin-vim"]
 	path = .vim/pack/plugin/start/kotlin-vim
 	url = https://github.com/udalov/kotlin-vim.git
+[submodule ".vim/pack/plugin/start/android-log.vim"]
+	path = .vim/pack/plugin/start/android-log.vim
+	url = https://github.com/yanqd0/android-log.vim.git
