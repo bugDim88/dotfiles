@@ -46,3 +46,6 @@
 [submodule ".vim/pack/plugin/start/android-log.vim"]
 	path = .vim/pack/plugin/start/android-log.vim
 	url = https://github.com/yanqd0/android-log.vim.git
+[submodule ".vim/pack/plugin/start/vim-bookmarks"]
+	path = .vim/pack/plugin/start/vim-bookmarks
+	url = https://github.com/MattesGroeger/vim-bookmarks.git
