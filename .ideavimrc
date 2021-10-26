@@ -1,5 +1,31 @@
-imap jk <Esc>
 
-map ccs :action ChangeColorScheme<CR>
-map rfc :action ReformatCode<CR>
+nnoremap <SPACE> <Nop>
+let mapleader="\<SPACE>"
+
+nnoremap ccs :action ChangeColorScheme<CR>
+nnoremap rfc :action ReformatCode<CR>
+
+" window activation
+nnoremap atw :action ActivateTerminalToolWindow<CR>
+nnoremap avw :action ActivateVersionControlToolWindow<CR>
+nnoremap arw :action ActivateREPLToolWindow<CR>
+nnoremap haw :action HideAllWindows<CR>
+
+" past yank register content
+::nnoremap <Leader>p "0p
+
+
+" copy to clipboard
+set clipboard=unnamed
+
+"line number settings
+set relativenumber
+set number
+
+" nerdTree
+set NERDTree
+nnoremap <C-t> :NERDTreeToggle<CR>
+
+" past yank register content
+::nnoremap <Leader>p "0p
 

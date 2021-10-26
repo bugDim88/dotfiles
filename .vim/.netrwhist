@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/a18706552/dotfiles/.vim'
+let g:netrw_dirhist_7='/Users/a18706552/dotfiles/.config'
+let g:netrw_dirhist_6='/Users/a18706552/Dropbox'
 let g:netrw_dirhist_5='/Users/a18706552/Coding/screen_saver_demo'
 let g:netrw_dirhist_4='/Users/a18706552/Coding/screen_saver_demo/app'
 let g:netrw_dirhist_3='/Users/a18706552/Coding/screen_saver_demo/app/src'

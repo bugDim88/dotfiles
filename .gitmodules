@@ -61,3 +61,12 @@
 [submodule ".vim/pack/plugin/start/vim-xkbswitch"]
 	path = .vim/pack/plugin/start/vim-xkbswitch
 	url = https://github.com/lyokha/vim-xkbswitch.git
+[submodule ".vim/pack/plugin/start/ctrlp.vim"]
+	path = .vim/pack/plugin/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule ".vim/pack/plugin/start/textutil.vim"]
+	path = .vim/pack/plugin/start/textutil.vim
+	url = https://github.com/vim-scripts/textutil.vim.git
+[submodule ".vim/pack/plugin/start/dart-vim-plugin"]
+	path = .vim/pack/plugin/start/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin.git

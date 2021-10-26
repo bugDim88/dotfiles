@@ -1,0 +1,55 @@
+#!/bin/sh
+
+rundeeplink() {
+    adb shell am start -W -a android.intent.action.VIEW -d '$1'
+}
+
+runvp(){
+    adb shell am start -n 'ru.sberdevices.videoplayer/.ui.MainActivity'
+}
+
+runmu(){
+    adb shell am start -n 'ru.sberdevices.music/.ui.MainActivity'
+}
+
+runva(){
+    adb shell am start -n 'ru.sberdevices.videos/.ui.MainActivity'
+}
+
+assemblePlayer(){
+    ./gradlew video-player:app:assembleDebug;
+    adb install Apps/VideoPlayer/app/build/outputs/apk/debug/app-debug.apk
+    runvp
+}
+
+assembleVideos(){
+    ./gradlew videos-app:assembleDebug
+    arr
+    # adb shell killall ru.sberdevices.videos  
+    # adb push Apps/videos/app/build/outputs/apk/debug/videos-app-debug.apk /vendor/app/StarVideos/StarVideos.apk
+    adb install Apps/videos/app/build/outputs/apk/debug/videos-app-debug.apk
+    runva
+}
+
+assembleMusic(){
+    ./gradlew :music-app:assembleDebug;
+    adb install Apps/music/app/build/outputs/apk/debug/music-app-debug.apk
+    runmu
+}
+
+assembleScreenSaver(){
+    ./gradlew :screensaver-app:assembleDebug;
+    adb install Apps/starscreensaver/app/build/outputs/apk/debug/screensaver-app-debug.apk
+}
+
+assembleStartube(){
+    ./gradlew :startube-app:assembleDebug;
+    adb install Apps/StarTube/app/build/outputs/apk/debug/startube-app-debug.apk
+    runstdeeplink 'http://youtube.com'
+}
+
+assembleCobalt(){
+    ./gradlew :startube-cobalt:assembleDebug;
+    adb install Apps/StarTube/cobalt/build/outputs/apk/debug/startube-cobalt-armeabi-v7a-debug.apk
+    adb shell am start -n 'ru.sberdevices.cobalt/.MainActivity'
+}
