@@ -53,3 +53,24 @@ assembleCobalt(){
     adb install Apps/StarTube/cobalt/build/outputs/apk/debug/startube-cobalt-armeabi-v7a-debug.apk
     adb shell am start -n 'ru.sberdevices.cobalt/.MainActivity'
 }
+
+install_ota_stargate(){
+    pushd ~/Downloads
+    mkdir ota
+    unzip stargate_ota.zip -d ota/
+    pushd ota
+    adb root
+    echo "trying to remove payload.bin from /cache"
+    adb shell rm /cache/payload.bin
+    adb push payload.bin /cache/
+    adb push payload_properties.txt /cache/
+    echo "starting payload.bin"
+    adb shell "/system/vendor/staros/update.sh /cache/payload.bin /cache/payload_properties.txt"
+    adb wait-for-device
+    echo "trying to remove update.bin from /cache"
+    adb root
+    adb shell rm /cache/payload.bin
+    popd
+    rm -fR ota
+    popd
+}

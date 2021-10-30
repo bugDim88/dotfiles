@@ -59,6 +59,8 @@ alias idearc='vim ~/dotfiles/.ideavimrc'
 alias notes='vim ~/Dropbox/notes.md'
 alias notes_car='vim ~/Dropbox/notes_car.md'
 alias notes_vim='vim ~/Dropbox/vim_notes.md'
+alias zshalias='vim ~/.zsh_aliases'
+function staros_scripts() { vim $HOME/dotfiles/scripts/staros_media_scripts }
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

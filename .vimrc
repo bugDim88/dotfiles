@@ -1,3 +1,26 @@
+" plugins settings (vim-plug tool is used)
+call plug#begin('~/.vim/plugged')
+Plug 'mileszs/ack.vim'
+Plug 'yanqd0/android-log.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'jcherven/jummidark.vim'
+Plug 'udalov/kotlin-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'vim-scripts/textutil.vim'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'mhinz/vim-janah'
+Plug 'mtdl9/vim-log-highlighting'
+Plug 'mhinz/vim-startify'
+
+"Dart/Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
+call plug#end()
+
 set backspace=indent,eol,start
 set autoindent
 set keymap=russian-jcukenwin
@@ -61,6 +84,10 @@ set laststatus=2
 
 let g:fzf_preview_window = ['up:40%', 'ctrl-\']
 
+" lsc server settings
+let g:lsc_server_commands = {'dart': 'dart_language_server'}
+autocmd CompleteDone * silent! pclose
+
 " MAPS
 "
 
@@ -96,7 +123,10 @@ nnoremap <Leader>j :exe "resize -5"<CR>
 nnoremap <Leader>[ :bp<CR>
 nnoremap <Leader>] :bn<CR>
 
+" close buffer
+nnoremap <Leader>q :q<CR>
+
 
 " NERDTree
 nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap ftf :NERDTreeToggle<CR>

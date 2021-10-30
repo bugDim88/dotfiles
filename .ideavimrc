@@ -25,6 +25,8 @@ set number
 " nerdTree
 set NERDTree
 nnoremap <C-t> :NERDTreeToggle<CR>
+" show that file on file tree
+nnoremap ftf :NERDTreeFind<CR>
 
 " past yank register content
 ::nnoremap <Leader>p "0p
