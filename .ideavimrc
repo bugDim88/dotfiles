@@ -1,33 +1,108 @@
+"#################################
+"# lines to cursor highlight     #  
+"#################################
+set cursorline
+set cursorcolumn
 
+"#################################
+"# case insesetive search        #  
+"#################################
+set ignorecase
+
+"#################################
+"# leader key                    #  
+"#################################
 nnoremap <SPACE> <Nop>
 let mapleader="\<SPACE>"
 
+"#################################
+"# tab navigation                #
+"#################################
+nnoremap <Leader>[ gT
+nnoremap <Leader>] gt
+
+"#################################
+"# close buffer                  #  
+"#################################
+nnoremap <Leader>q :q<CR>
+
+"#################################
+"# split navigation with alt key #  
+"#################################
+nnoremap ˙ <C-w>h
+nnoremap ∆ <C-w>j
+nnoremap ˚ <C-w>k
+nnoremap ¬ <C-w>l
+
+"#################################
+"# errors navigation             #  
+"#################################
+nnoremap e] :action GotoNextError<CR>
+nnoremap e[ :action GotoPreviousError<CR>
+
+"#################################
+"# changes navigation            #  
+"#################################
+nnoremap c] :action VcsShowNextChangeMarker<CR>
+nnoremap c[ :action VcsShowPrevChangeMarker<CR>
+
+"#################################
+"# apply vimrc source            #  
+"#################################
+nnoremap <Leader>sv :source ~/.ideavimrc<CR>
+
+"#################################
+"# go to test                    #  
+"#################################
+nnoremap gtt :action GotoTest<CR>
+
+"#################################
+"# move tab to opposite split    #  
+"#################################
+nnoremap <Leader>r :action MoveEditorToOppositeTabGroup<CR>
+
+
+
+"#################################
+"# change color scheme           #  
+"#################################
 nnoremap ccs :action ChangeColorScheme<CR>
+
+"#################################
+"# reformat code                 #  
+"#################################
 nnoremap rfc :action ReformatCode<CR>
 
-" window activation
+"#################################
+"# window activation             #  
+"#################################
 nnoremap atw :action ActivateTerminalToolWindow<CR>
 nnoremap avw :action ActivateVersionControlToolWindow<CR>
 nnoremap arw :action ActivateREPLToolWindow<CR>
 nnoremap haw :action HideAllWindows<CR>
 
-" past yank register content
+"#################################
+"# past yank register content    #  
+"#################################
 ::nnoremap <Leader>p "0p
 
 
-" copy to clipboard
+"#################################
+"# copy to clipboard             #
+"#################################
 set clipboard=unnamed
 
-"line number settings
+"#################################
+"# line number settings          #
+"#################################
 set relativenumber
 set number
 
-" nerdTree
+
+"#################################
+"# NerdTree                      #  
+"#################################
 set NERDTree
-nnoremap <C-t> :NERDTreeToggle<CR>
-" show that file on file tree
+nnoremap <leader>t :NERDTreeToggle<CR>
+"# show that file on file tree
 nnoremap ftf :NERDTreeFind<CR>
-
-" past yank register content
-::nnoremap <Leader>p "0p
-

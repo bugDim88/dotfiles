@@ -68,6 +68,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Enable insecure directories
 ZSH_DISABLE_COMPFIX="true"
 
+# ZSH_THEME="blinks"
 ZSH_THEME="robbyrussell"
 plugins=(
  git
@@ -80,6 +81,7 @@ source $ZSH/oh-my-zsh.sh
 
 # path settings
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=/usr/local/bin:$PATH
@@ -91,6 +93,8 @@ source "$HOME/dotfiles/scripts/staros_media_scripts"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+export VI_MODE_SET_CURSOR=true
 
 
 fpath+=$HOME/.zsh/pure

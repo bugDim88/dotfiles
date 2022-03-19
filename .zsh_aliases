@@ -4,6 +4,8 @@
 # put to zip & open in finder
 alias staros_log_arch='adb wait-for-device; adb root; src="/data/staros/service_logs/"; src2="/data/staros/logs/"; src3="/data/staros/star.db"; src4="/vendor/staros/star.json"; dst_dir="$(mktemp -d)"/; adb pull $src $src2 $src3 $src4 $dst_dir; sn=$(adb shell getprop ro.serialno); date=$(date '+%Y_%m_%d_%H_%M_%S'); zip_name="all_logs_${sn}_${date}.zip"; (cd "$dst_dir"; zip -rFS9 "$zip_name" .); open "$dst_dir"'
 
+alias staros_log_arch_ranger='adb wait-for-device; adb root; src="/data/staros/service_logs/"; src2="/data/staros/logs/"; src3="/data/staros/star.db"; src4="/vendor/staros/star.json"; dst_dir="$(mktemp -d)"/; adb pull $src $src2 $src3 $src4 $dst_dir; sn=$(adb shell getprop ro.serialno); date=$(date '+%Y_%m_%d_%H_%M_%S'); zip_name="all_logs_${sn}_${date}.zip"; (cd "$dst_dir"; zip -rFS9 "$zip_name" .); ranger "$dst_dir"'
+
 # get build number
 alias staros_version="adb shell cat /vendor/staros/star.json | grep starVer"
 

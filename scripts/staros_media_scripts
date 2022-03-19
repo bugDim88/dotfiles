@@ -32,14 +32,14 @@ assembleVideos(){
 }
 
 assembleMusic(){
-    ./gradlew :music-app:assembleDebug;
-    adb install Apps/music/app/build/outputs/apk/debug/music-app-debug.apk
+    ./gradlew :music:app:assembleDebug;
+    adb install star/apps/music/app/build/outputs/apk/debug/music-app-debug.apk
     runmu
 }
 
 assembleScreenSaver(){
-    ./gradlew :screensaver-app:assembleDebug;
-    adb install Apps/starscreensaver/app/build/outputs/apk/debug/screensaver-app-debug.apk
+    ./gradlew :screensaver:app:assembleDebug;
+    adb install Apps/starscreensaver/app/build/outputs/apk/debug/app-debug.apk
 }
 
 assembleStartube(){

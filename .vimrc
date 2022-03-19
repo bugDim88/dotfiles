@@ -2,24 +2,39 @@
 call plug#begin('~/.vim/plugged')
 Plug 'mileszs/ack.vim'
 Plug 'yanqd0/android-log.vim'
+
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" NERDTree
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+Plug 'tpope/vim-fugitive'
 Plug 'jcherven/jummidark.vim'
 Plug 'udalov/kotlin-vim'
-Plug 'itchyny/lightline.vim'
-Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/textutil.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'mhinz/vim-janah'
 Plug 'mtdl9/vim-log-highlighting'
 Plug 'mhinz/vim-startify'
 
-"Dart/Flutter
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
+Plug 'NLKNguyen/papercolor-theme'
+
+"# icons must be the last one
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+
+"#################################
+"# lines to cursor highlight     #  
+"#################################
+set cursorline
+set cursorcolumn
 
 set backspace=indent,eol,start
 set autoindent
@@ -27,43 +42,57 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 
-"remap $MYVIMRC
+"# remap $MYVIMRC
 let $MYVIMRC="~/dotfiles/.vimrc"
 
-"line number settings
+"#################################
+"# line number settings          #  
+"#################################
 set relativenumber
 set number
 
-set enc=utf-8
+"#################################
+"# encoding settings             #  
+"#################################
+set encoding=UTF-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8,prc
 
+"#################################
+"# case insesetive search        #  
+"#################################
 set ignorecase
 
-" Ex history
+"# Ex history
 set history=200
 
-"xkbswitch
-"let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
-"let g:XkbSwitchEnabled = 1
-"let g:XkbSwitchIMappings = ['ru']
-
-" android log syntax hight light
+"#################################
+"# syntax hightlight             #  
+"#################################
+"# syntax highlight
+syntax on
+"# android log syntax hight light
 set ft=android_log
 
-" easy expansion of the active file directory
+"#################################
+"# lines to save text folding    #  
+"#################################
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+"# easy expansion of the active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" syntax highlight
-syntax on
 
-" copy to clipboard
+"# copy to clipboard
 set clipboard=unnamed
 
-" octal numbers skiped
+"# octal numbers skiped
 set nrformats=
 
-" tab identation
+"#################################
+"# tab identation                #  
+"#################################
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -74,59 +103,108 @@ set wildmode=full
 
 set nowrapscan
 
-colorscheme janah
+"##########################
+"# color settings         #
+"##########################
+colorscheme PaperColor
 set background=dark
 
+"##########################
+"# fzf settings           #
+"##########################
 set rtp+=/usr/local/opt/fzf
-
-" for powerline bottom bar
-set laststatus=2
-
 let g:fzf_preview_window = ['up:40%', 'ctrl-\']
 
-" lsc server settings
-let g:lsc_server_commands = {'dart': 'dart_language_server'}
-autocmd CompleteDone * silent! pclose
+"# for powerline bottom bar
+set laststatus=2
 
-" MAPS
-"
+"##########################
+"# default font           #
+"##########################
+set guifont=Hack_Nerd_Font_Mono
 
 
-" set leader key
+"##########################
+"##########################
+"# MAPPINGS               #
+"##########################
+"##########################
+
+
+"##########################
+"# set leader key         #
+"##########################
 nnoremap <SPACE> <Nop>
 let mapleader="\<SPACE>"
 
+"##########################
+"# map arrow keys         #
+"##########################
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
+"##########################
+"# search next and center #
+"##########################
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
 
-" count last serch pattern accurence
+"######################################
+"# count last serch pattern accurence #
+"######################################
 noremap <Leader>sc :%s///gn<CR>
 
-" edit vimrc
+"#################################
+"# edit vimrc                    #  
+"#################################
 :nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
-" apply vimrc
 :nnoremap <Leader>sv :source $MYVIMRC<CR>
 
-" past yank register content
+"#################################
+"# past yank register content    #  
+"#################################
 ::nnoremap <Leader>p "0p
 
-" window resize 
+"#################################
+"# window resize                 #  
+"#################################
 nnoremap <Leader>l :exe "vertical resize +5"<CR>
 nnoremap <Leader>h :exe "vertical resize -5"<CR>
 nnoremap <Leader>k :exe "resize +5"<CR>
 nnoremap <Leader>j :exe "resize -5"<CR>
 
-" buffers navigation
-nnoremap <Leader>[ :bp<CR>
-nnoremap <Leader>] :bn<CR>
+"#################################
+"# tab navigation                #  
+"#################################
+nnoremap <Leader>[ gT
+nnoremap <Leader>] gt
 
-" close buffer
+"#################################
+"# tab moving                    #  
+"#################################
+nnoremap t[ :exe "tabm -"<CR>
+nnoremap t] :exe "tabm +"<CR> 
+
+"#################################
+"# close buffer                  #  
+"#################################
 nnoremap <Leader>q :q<CR>
 
+"#################################
+"# split navigation with alt key #  
+"#################################
+nnoremap ˙ <C-w>h
+nnoremap ∆ <C-w>j
+nnoremap ˚ <C-w>k
+nnoremap ¬ <C-w>l
 
-" NERDTree
-nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap ftf :NERDTreeToggle<CR>
+"####################################
+"# toggle background (light || dark)#  
+"####################################
+nnoremap cb :let &bg=(&bg=='light'?'dark':'light')<CR>
+
+"#################################
+"# NerdTree                      #  
+"#################################
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap ftf :NERDTreeFind<CR>
