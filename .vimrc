@@ -30,6 +30,13 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+
+"#################################
+"# settings for local vimrc      #  
+"#################################
+set exrc
+set secure exrc
+
 "#################################
 "# lines to cursor highlight     #  
 "#################################
