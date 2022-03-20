@@ -215,3 +215,5 @@ nnoremap cb :let &bg=(&bg=='light'?'dark':'light')<CR>
 "#################################
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap ftf :NERDTreeFind<CR>
+"# show hidden files
+let NERDTreeShowHidden=1
