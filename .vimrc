@@ -217,3 +217,9 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap ftf :NERDTreeFind<CR>
 "# show hidden files
 let NERDTreeShowHidden=1
+
+"#################################
+"# Fugitive map                  #  
+"#################################
+nnoremap <leader>g :Git<CR>
+nnoremap <leader>gl :Gclog<CR>
