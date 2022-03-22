@@ -206,6 +206,11 @@ nnoremap ˚ <C-w>k
 nnoremap ¬ <C-w>l
 
 "####################################
+"# pretty json of current row       #  
+"####################################
+nnoremap js :exe "'<,'>!jq"<CR>
+
+"####################################
 "# toggle background (light || dark)#  
 "####################################
 nnoremap cb :let &bg=(&bg=='light'?'dark':'light')<CR>
