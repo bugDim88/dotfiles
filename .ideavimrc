@@ -74,11 +74,18 @@ nnoremap ccs :action ChangeColorScheme<CR>
 nnoremap rfc :action ReformatCode<CR>
 
 "#################################
+"# repl actions                  #  
+"#################################
+"# jump to repl editor
+nnoremap <Leader>re :action :cursive.repl.actions/jump-to-repl<CR>
+"# sync files to repl
+nnoremap <Leader>rs :action :cursive.repl.actions/sync-files<CR>
+
+"#################################
 "# window activation             #  
 "#################################
 nnoremap atw :action ActivateTerminalToolWindow<CR>
 nnoremap avw :action ActivateVersionControlToolWindow<CR>
-nnoremap arw :action ActivateREPLToolWindow<CR>
 nnoremap haw :action HideAllWindows<CR>
 
 "#################################
