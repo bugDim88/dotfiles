@@ -23,6 +23,8 @@ Plug 'mhinz/vim-janah'
 Plug 'mtdl9/vim-log-highlighting'
 Plug 'mhinz/vim-startify'
 
+Plug 'vimwiki/vimwiki'
+
 Plug 'NLKNguyen/papercolor-theme'
 
 "# icons must be the last one
