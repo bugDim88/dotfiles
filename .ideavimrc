@@ -59,9 +59,16 @@ nnoremap gtt :action GotoTest<CR>
 "#################################
 "# move tab to opposite split    #  
 "#################################
-nnoremap <Leader>r :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <Leader>sg :action MoveEditorToOppositeTabGroup<CR>
 
 
+"#################################
+"# split stretching              #  
+"#################################
+nnoremap <Leader>h :action StretchSplitToLeft<CR>
+nnoremap <Leader>l:action StretchSplitToRight<CR>
+nnoremap <Leader>j :action StretchSplitToBottom<CR>
+nnoremap <Leader>k :action StretchSplitToTop<CR>
 
 "#################################
 "# change color scheme           #  
