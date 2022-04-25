@@ -61,12 +61,16 @@ nnoremap gtt :action GotoTest<CR>
 "#################################
 nnoremap <Leader>sg :action MoveEditorToOppositeTabGroup<CR>
 
+"#################################
+"# centralize                    #  
+"#################################
+nnoremap <Leader>c zz
 
 "#################################
 "# split stretching              #  
 "#################################
 nnoremap <Leader>h :action StretchSplitToLeft<CR>
-nnoremap <Leader>l:action StretchSplitToRight<CR>
+nnoremap <Leader>l :action StretchSplitToRight<CR>
 nnoremap <Leader>j :action StretchSplitToBottom<CR>
 nnoremap <Leader>k :action StretchSplitToTop<CR>
 
