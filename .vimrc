@@ -9,9 +9,9 @@ Plug 'junegunn/fzf.vim'
 
 " NERDTree
 Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'preservim/nerdcommenter'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'tpope/vim-fugitive'
 Plug 'jcherven/jummidark.vim'
@@ -28,10 +28,23 @@ Plug 'vimwiki/vimwiki'
 Plug 'NLKNguyen/papercolor-theme'
 
 "# icons must be the last one
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+"#################################
+"# vimwiki settings              #  
+"#################################
+"# set paht for index
+let g:vimwiki_list = [{'path': '$HOME/Dropbox/wiki'}]
+"# set extension to .md
+let g:vimwiki_ext = '.md' 
+"# make sure vimwiki doesn't own all .md files
+let g:vimwiki_global_ext = 0 
+"# folding method
+let g:vimwiki_folding='list'
+"# workaround on diary update
+autocmd BufEnter diary.md :VimwikiDiaryGenerateLinks
 
 "#################################
 "# settings for local vimrc      #  
