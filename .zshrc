@@ -52,16 +52,35 @@ alias vim=nvim
 alias v=vim
 alias s='source ~/.zshrc'
 
+alias rangercd='. ranger'
+
 # settings files start
 alias zshrc='vim ~/dotfiles/.zshrc'
 alias vimrc='vim ~/dotfiles/.vimrc'
 alias idearc='vim ~/dotfiles/.ideavimrc'
 # alias notes='vim ~/Dropbox/notes.md'
-alias notes='vim ~/vimwiki/index.wiki'
+alias notes='vim -c VimwikiIndex'
 alias notes_car='vim ~/Dropbox/notes_car.md'
 alias notes_vim='vim ~/Dropbox/vim_notes.md'
 alias zshalias='vim ~/.zsh_aliases'
 function staros_scripts() { vim $HOME/dotfiles/scripts/staros_media_scripts }
+
+# ranger with Q mapped to shell CD
+function ranger(){
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+    
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command rm -f -- "$tempfile" 2>/dev/null
+}
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
