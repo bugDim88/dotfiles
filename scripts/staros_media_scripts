@@ -74,3 +74,15 @@ install_ota_stargate(){
     rm -fR ota
     popd
 }
+
+install_ota_sberbox(){
+    pushd ~/Downloads
+    adb root
+    adb shell rm /cache/update.bin
+    adb push sberbox_ota.zip /cache/update.bin
+    adb shell "/system/vendor/staros/update.sh /cache/update.bin"
+    adb wait-for-device
+    adb root
+    adb shell rm /cache/update.bin
+    popd
+}
