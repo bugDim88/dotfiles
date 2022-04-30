@@ -46,6 +46,7 @@ let g:vimwiki_folding='list'
 "# workaround on diary update
 autocmd BufEnter diary.md :VimwikiDiaryGenerateLinks
 
+
 "#################################
 "# settings for local vimrc      #  
 "#################################
@@ -111,6 +112,9 @@ set clipboard=unnamed
 
 "# octal numbers skiped
 set nrformats=
+
+"# отказ от менее быстрого zsh под капотом
+set shell=/bin/bash
 
 "#################################
 "# tab identation                #  
