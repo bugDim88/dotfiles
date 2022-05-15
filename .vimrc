@@ -1,37 +1,3 @@
-" plugins settings (vim-plug tool is used)
-call plug#begin('~/.vim/plugged')
-Plug 'mileszs/ack.vim'
-Plug 'yanqd0/android-log.vim'
-
-" FZF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" NERDTree
-Plug 'preservim/nerdtree'
-"Plug 'preservim/nerdcommenter'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-Plug 'tpope/vim-fugitive'
-Plug 'jcherven/jummidark.vim'
-Plug 'udalov/kotlin-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-scripts/textutil.vim'
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'mhinz/vim-janah'
-Plug 'mtdl9/vim-log-highlighting'
-Plug 'mhinz/vim-startify'
-
-Plug 'vimwiki/vimwiki'
-
-Plug 'NLKNguyen/papercolor-theme'
-
-"# icons must be the last one
-"Plug 'ryanoasis/vim-devicons'
-
-call plug#end()
-
 "#################################
 "# vimwiki settings              #  
 "#################################
@@ -247,3 +213,11 @@ let NERDTreeShowHidden=1
 "#################################
 nnoremap <leader>g :Git<CR>
 nnoremap <leader>gl :Gclog<CR>
+
+"#################################
+"# Telescope                     #  
+"#################################
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

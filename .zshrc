@@ -12,8 +12,6 @@ alias java16='unset JAVA_HOME;export JAVA_HOME=$JAVA_16_HOME;export PATH=$JAVA_H
 # default to Java 11
 java11
 
-#default editor
-export EDITOR='nvim'
 
 ##########
 # FZF SETTINGS
@@ -46,6 +44,8 @@ _fzf_compgen_dir() {
     fd --type d . "$1"
 }
 
+#default editor
+export EDITOR='nvim'
 
 # help commands start
 alias vim=nvim
@@ -109,6 +109,7 @@ export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="$HOME/Development/flutter/bin:$PATH"
 export PATH="/usr/local/bin/python:$PATH"
 export PATH="$HOME/dotfiles/scripts/bin:$PATH"
+export PATH="$HOME/Development/neovide/target/release:$PATH"
 source "$HOME/dotfiles/scripts/staros_media_scripts"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
