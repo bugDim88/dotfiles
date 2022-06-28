@@ -18,3 +18,8 @@ vim.keymap.set("n", "+", font_size_inc)
 vim.keymap.set("n", "-", font_size_dec)
 
 vim.o.guifont = "Hack Nerd Font Mono:h15"
+
+-- nvim-tree
+vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "ftf", ":NvimTreeFindFile<CR>")
+

@@ -11,8 +11,6 @@ Plug('junegunn/fzf', { ['do'] = vim.fn['fzf#install'] })
 Plug 'junegunn/fzf.vim'
 
 -- NERDTree
-Plug 'preservim/nerdtree'
-
 Plug 'tpope/vim-fugitive'
 Plug 'jcherven/jummidark.vim'
 Plug 'vim-airline/vim-airline'
@@ -32,6 +30,9 @@ Plug 'nvim-telescope/telescope.nvim'
 -- Treesiter
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = 'TSUpdate'})
 
+-- nvim-tree
+Plug 'kyazdani42/nvim-tree.lua'
+
 vim.call('plug#end')
 
 -- Treesitter
@@ -45,3 +46,6 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+-- nvim-tree
+require("nvim-tree").setup()
