@@ -200,13 +200,6 @@ nnoremap js :exe "'<,'>!jq"<CR>
 "####################################
 nnoremap cb :let &bg=(&bg=='light'?'dark':'light')<CR>
 
-"#################################
-"# NerdTree                      #  
-"#################################
-nnoremap <leader>t :NERDTreeToggle<CR>
-nnoremap ftf :NERDTreeFind<CR>
-"# show hidden files
-let NERDTreeShowHidden=1
 
 "#################################
 "# Fugitive map                  #  
