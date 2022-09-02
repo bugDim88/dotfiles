@@ -40,3 +40,6 @@ alias adb_root_rem="adb root; adb remount"
 
 # SELinux dissable
 alias skip_se_linux_ruls="adb shell setenforce permissive"
+
+# adb device SHAKE
+alias adb_shake="adb emu sensor set acceleration 100:100:100; sleep 1; adb emu sensor set acceleration 0:0:0"
