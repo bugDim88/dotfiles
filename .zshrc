@@ -13,6 +13,9 @@ alias java16='unset JAVA_HOME;export JAVA_HOME=$JAVA_16_HOME;export PATH=$JAVA_H
 java11
 
 
+# EMACS
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+
 ##########
 # FZF SETTINGS
 ##########
