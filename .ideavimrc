@@ -47,6 +47,14 @@ nnoremap c] :action VcsShowNextChangeMarker<CR>
 nnoremap c[ :action VcsShowPrevChangeMarker<CR>
 
 "#################################
+"# Bookmarks                     #   
+"#################################
+nnoremap b] :action GotoNextBookmark<CR>
+nnoremap b[ :action GotoPreviousBookmark<CR>
+nnoremap bb :action ToggleBookmark<CR>
+nnoremap abw :action ShowBookmarks<CR>
+
+"#################################
 "# apply vimrc source            #  
 "#################################
 nnoremap <Leader>sv :source ~/.ideavimrc<CR>
