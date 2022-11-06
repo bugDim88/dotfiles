@@ -215,6 +215,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+"#################################
+"# calculator                    #  
+"#################################
+nnoremap <leader>cl 0yt=f=a<C-r>=<C-r>"<CR><Esc>
 
 "#################################
 "# c++                           #  
