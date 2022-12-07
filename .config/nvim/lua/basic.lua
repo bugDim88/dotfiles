@@ -23,6 +23,7 @@ Plug 'mhinz/vim-startify'
 Plug 'vimwiki/vimwiki'
 
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'airblade/vim-gitgutter'
 
 -- Telescope and it's deps
 Plug 'nvim-lua/plenary.nvim'

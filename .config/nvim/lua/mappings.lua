@@ -25,6 +25,13 @@ vim.keymap.set("n", "ftf", ":Lexplore %:p:h<CR>")
 -- all buffers to tabs
 vim.keymap.set("n", "<leader>bt", ":tab ball<CR>")
 
+-- GitGutter START
+vim.g.updatetime = 100
+vim.g.gitgutter_enabled = 0
+vim.g.gitgutter_grep = 'rg'
+vim.keymap.set("n", "<leader>gt", ":GitGutterToggle<CR>")
+-- GitGutter END
+
 -- Telescope START
 local telescope = require('telescope')
 local telescope_actions = require('telescope.actions')
@@ -49,7 +56,7 @@ telescope.setup {
       hijack_netrw = true,
       -- determines whether to show hidden files
       hidden = true,
-      initial_mode = 'normal',
+      -- initial_mode = 'normal',
       -- sorting by directories and then files
       grouped = true,
       mappings = {
@@ -73,7 +80,8 @@ vim.keymap.set('n', '<leader>ff', telescopeFn.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescopeFn.live_grep, {})
 vim.keymap.set('n', '<leader>fb', telescopeFn.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescopeFn.help_tags, {})
-vim.keymap.set('n', '<leader>fc', telescopeFn.command_history, {})
+vim.keymap.set('n', '<leader>fch', telescopeFn.command_history, {})
+vim.keymap.set('n', '<leader>fc', telescopeFn.commands, {})
 vim.keymap.set('n', '<leader>fq', telescopeFn.search_history, {})
 vim.keymap.set('n', '<leader>/', telescopeFn.current_buffer_fuzzy_find, {})
 vim.keymap.set('n', '<leader>fm', ':Telescope file_browser path=%:p:h<CR>')
