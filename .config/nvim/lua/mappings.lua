@@ -18,6 +18,7 @@ vim.keymap.set("n", "+", font_size_inc)
 vim.keymap.set("n", "-", font_size_dec)
 
 vim.o.guifont = "Hack Nerd Font Mono:h15"
+vim.g.maplocalleader = ","
 
 vim.keymap.set("n", "<leader>t", ":Lexplore<CR>")
 vim.keymap.set("n", "ftf", ":Lexplore %:p:h<CR>")
@@ -29,8 +30,13 @@ vim.keymap.set("n", "<leader>bt", ":tab ball<CR>")
 vim.g.updatetime = 100
 vim.g.gitgutter_enabled = 0
 vim.g.gitgutter_grep = 'rg'
-vim.keymap.set("n", "<leader>gt", ":GitGutterToggle<CR>")
+vim.keymap.set("n", "<leader>git", ":GitGutterToggle<CR>")
 -- GitGutter END
+
+
+-- Conjure START
+vim.g['conjure#extract#tree_sitter#enabled'] = true
+-- Conjure END
 
 -- Telescope START
 local telescope = require('telescope')
@@ -80,7 +86,7 @@ vim.keymap.set('n', '<leader>ff', telescopeFn.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescopeFn.live_grep, {})
 vim.keymap.set('n', '<leader>fb', telescopeFn.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescopeFn.help_tags, {})
-vim.keymap.set('n', '<leader>fch', telescopeFn.command_history, {})
+vim.keymap.set('n', '<leader>ch', telescopeFn.command_history, {})
 vim.keymap.set('n', '<leader>fc', telescopeFn.commands, {})
 vim.keymap.set('n', '<leader>fq', telescopeFn.search_history, {})
 vim.keymap.set('n', '<leader>/', telescopeFn.current_buffer_fuzzy_find, {})

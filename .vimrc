@@ -66,8 +66,8 @@ set ft=android_log
 "#################################
 "# lines to save text folding    #  
 "#################################
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview
 
 "# easy expansion of the active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -206,14 +206,6 @@ nnoremap cb :let &bg=(&bg=='light'?'dark':'light')<CR>
 "#################################
 nnoremap <leader>g :Git<CR>
 nnoremap <leader>gl :Gclog<CR>
-
-"#################################
-"# Telescope                     #  
-"#################################
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "#################################
 "# calculator                    #  
