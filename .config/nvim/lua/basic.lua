@@ -16,7 +16,7 @@ vim.call('plug#begin', '~/.vim/plugged')
 Plug 'yanqd0/android-log.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'mhinz/vim-startify'
-Plug 'vim-airline/vim-airline'
+-- Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/textutil.vim'
 Plug 'vimwiki/vimwiki'
 
@@ -31,6 +31,9 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 -- Treesiter
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 
+-- Conjure
 Plug 'Olical/conjure'
 Plug 'Olical/aniseed'
+
+Plug 'nvim-lualine/lualine.nvim'
 vim.call('plug#end')
