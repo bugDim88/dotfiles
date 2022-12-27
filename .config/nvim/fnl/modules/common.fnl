@@ -6,7 +6,7 @@
 ;; Изменение размеров шрифта
 (nvim.set_keymap :n "+" ":call FontSizeInc()<cr>" {:noremap true})
 (nvim.set_keymap :n "-" ":call FontSizeDec()<cr>" {:noremap true})
-(set nvim.o.guifont  "Hack Nerd Font Mono:h15")
+(set nvim.o.guifont  "Hack Nerd Font Mono:h20")
 
 (set nvim.g.maplocalleader ",")
 

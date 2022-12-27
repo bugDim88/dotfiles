@@ -36,4 +36,5 @@ Plug 'Olical/conjure'
 Plug 'Olical/aniseed'
 
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'neovim/nvim-lspconfig'
 vim.call('plug#end')
