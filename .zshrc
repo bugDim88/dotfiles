@@ -15,6 +15,10 @@ java11
 
 # EMACS
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+alias clj_repl="clj -Sdeps '{:deps {nrepl/nrepl {:mvn/version "0.9.0"} cider/cider-nrepl {:mvn/version "0.28.4"}}}' \
+    -m nrepl.cmdline \
+    --middleware '["cider.nrepl/cider-middleware"]' \
+    --interactive"
 
 ##########
 # FZF SETTINGS
@@ -63,6 +67,7 @@ alias vimrc='vim ~/dotfiles/.vimrc'
 alias idearc='vim ~/dotfiles/.ideavimrc'
 # alias notes='vim ~/Dropbox/notes.md'
 alias notes='vim -c VimwikiIndex'
+alias wiki_e='emacs ~/Dropbox/wiki_org'
 alias notes_car='vim ~/Dropbox/notes_car.md'
 alias notes_vim='vim ~/Dropbox/vim_notes.md'
 alias zshalias='vim ~/.zsh_aliases'
@@ -115,8 +120,12 @@ export PATH="$HOME/dotfiles/scripts/bin:$PATH"
 export PATH="$HOME/Development/neovide/target/release:$PATH"
 source "$HOME/dotfiles/scripts/staros_media_scripts"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_com$
+
+#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 export VI_MODE_SET_CURSOR=true
 
