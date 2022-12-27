@@ -2,6 +2,8 @@
 (add-to-list 'package-archives
              ;; '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 	     '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("org" . "http://orgmode.org/elpa/") t)
 (package-initialize)
 
 ;; Download the ELPA archive description if needed.
@@ -195,7 +197,7 @@
 ;; ==
 (defun bdv/org-mode-setup ()
   (org-indent-mode)
-  (variable-pitch-mode 1)
+  ;;(variable-pitch-mode 1)
   (visual-line-mode 1))
 
 (defun bdv/org-font-setup ()
@@ -215,8 +217,9 @@
   :custom
   (org-hide-emphasis-markers t)
   :config
-  (setq org-ellipsis " ▾")
-  (bdv/org-font-setup))
+  (setq org-ellipsis " ...")
+  (bdv/org-font-setup)
+  )
 
 (use-package org-bullets
   :after org
