@@ -158,6 +158,23 @@ noremap <Leader>sc :%s///gn<CR>
 ::nnoremap <Leader>p "0p
 
 "#################################
+"# yank file name                #  
+"#################################
+" yank just file name 
+::nnoremap <Leader>yf :let @+ = expand("%:t")<CR>
+" yank relative path
+::nnoremap <Leader>yp :let @+ = expand("%")<CR>
+" yank full path
+::nnoremap <Leader>yP :let @+ = expand("%:p")<CR>
+
+"#######################################
+"# костыли пока не работает кнопка +/= #  
+"#######################################
+::imap <F2> <C-R>="="<C-M>
+::imap <F3> <C-R>="+"<C-M>
+
+
+"#################################
 "# window resize                 #  
 "#################################
 nnoremap <Leader>l :exe "vertical resize +5"<CR>
