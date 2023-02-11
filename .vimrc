@@ -9,6 +9,7 @@ let g:vimwiki_ext = '.md'
 let g:vimwiki_global_ext = 0 
 "# folding method
 let g:vimwiki_folding='list'
+let g:vimwiki_folding=''
 "# workaround on diary update
 autocmd BufEnter diary.md :VimwikiDiaryGenerateLinks
 
