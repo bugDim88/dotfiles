@@ -151,6 +151,8 @@ noremap <Leader>sc :%s///gn<CR>
 "#################################
 :nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 :nnoremap <Leader>sv :source $MYVIMRC<CR>
+" for neo vim
+:nnoremap <Leader>env :vsplit $HOME/dotfiles/.config/nvim<CR>
 
 "#################################
 "# past yank register content    #  
