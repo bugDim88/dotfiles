@@ -1,5 +1,6 @@
 (module util
-  {require { nvim aniseed.nvim }})
+  {require { nvim aniseed.nvim 
+             {: assoc : update} aniseed.core}})
 
 
 (defn expand [path]
@@ -22,3 +23,12 @@
     (.. "<leader>" from)
     (.. ":" to "<cr>")
     {:noremap true}))
+
+(defn +docs [opts to]
+  (update opts :desc (fn [desc] (or desc to))))
+
+(defn kset [modes from to opts]
+  (let [opts  (if 
+                (= (type opts) "table")  opts
+                (= (type opts) "string") {:desc opts})]
+    (vim.keymap.set modes from to (+docs opts to))))
