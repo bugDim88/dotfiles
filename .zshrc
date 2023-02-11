@@ -2,7 +2,7 @@
 # JAVA
 #####
 export JAVA_8_HOME=$(/usr/libexec/java_home -v "1.8.0_292")
-export JAVA_11_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
+export JAVA_11_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 export JAVA_16_HOME=$(/usr/libexec/java_home -v16)
 
 alias java8='unset JAVA_HOME;export JAVA_HOME=$JAVA_8_HOME;export PATH=$JAVA_HOME/bin:$PATH'
