@@ -38,4 +38,5 @@ Plug 'Olical/aniseed'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'stevearc/oil.nvim'
+Plug 'bugDim88/presenting.vim'
 vim.call('plug#end')
