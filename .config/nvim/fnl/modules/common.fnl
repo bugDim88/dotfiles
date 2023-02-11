@@ -4,7 +4,7 @@
             util util}})
 
 ;; Изменение размеров шрифта
-(nvim.set_keymap :n "+" ":call FontSizeInc()<cr>" {:noremap true})
+(nvim.set_keymap :n "_" ":call FontSizeInc()<cr>" {:noremap true})
 (nvim.set_keymap :n "-" ":call FontSizeDec()<cr>" {:noremap true})
 (set nvim.o.guifont  "Hack Nerd Font Mono:h20")
 
@@ -12,6 +12,8 @@
 
 (util.nnoremap "t" "Lexplore")
 (nvim.set_keymap :n "ftf" ":Lexplore %:p:h<CR>" {:noremap true})
+(nvim.set_keymap :n "b]" ":bnext <CR>" {:noremap true})
+(nvim.set_keymap :n "b[" ":bprev <CR>" {:noremap true})
 
 
 
