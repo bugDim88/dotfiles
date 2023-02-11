@@ -18,8 +18,8 @@
     (map :<c-n> "lua vim.lsp.diagnostic.goto_prev()")
     (map :<c-p> "lua vim.lsp.diagnostic.goto_next()")
 
-    (map :<leader>lr "lua vim.lsp.buf.rename()")
-    (map :<leader>lf "lua vim.lsp.buf.formatting()")))
+    (map :<leader>br "lua vim.lsp.buf.rename()")
+    (map :<leader>cf "lua vim.lsp.buf.formatting()")))
 
 ;; Clojure
 (lsp.clojure_lsp.setup {:on_attach on-attach})
