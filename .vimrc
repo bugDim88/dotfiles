@@ -235,3 +235,8 @@ nnoremap <leader>cl 0yt=f=a<C-r>=<C-r>"<CR><Esc>
 "# c++                           #  
 "#################################
 nnoremap <C-c> :!g++ % -o  %:r.out && ./%:r.out<CR>
+
+"#################################
+"# terminal mode mappings        #  
+"#################################
+:tnoremap <Esc> <C-\><C-n>
