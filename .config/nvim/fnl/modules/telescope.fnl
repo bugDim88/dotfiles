@@ -28,6 +28,16 @@
                   :pickers {
                             :find_files big-vertical-theme
                             :live_grep big-vertical-theme
+                            :current_buffer_fuzzy_find big-vertical-theme
+                            :buffers {
+                                     :layout_strategy big-vertical-theme.layout_strategy
+                                     :layout_config big-vertical-theme.layout_config
+                                     :mappings {
+                                                :i {
+                                                    "<C-d>" telescope-actions.delete_buffer
+                                                    }
+                                                }
+                                      }
                             }
                   :extensions {
                                :file_browser {
