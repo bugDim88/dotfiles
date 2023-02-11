@@ -37,4 +37,5 @@ Plug 'Olical/aniseed'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'stevearc/oil.nvim'
 vim.call('plug#end')
