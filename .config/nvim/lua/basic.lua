@@ -21,6 +21,7 @@ Plug 'vim-scripts/textutil.vim'
 Plug 'vimwiki/vimwiki'
 
 Plug 'NLKNguyen/papercolor-theme'
+Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug 'airblade/vim-gitgutter'
 
 -- Telescope and it's deps

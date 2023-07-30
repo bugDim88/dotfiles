@@ -29,6 +29,7 @@
                             :find_files big-vertical-theme
                             :live_grep big-vertical-theme
                             :current_buffer_fuzzy_find big-vertical-theme
+                            :marks big-vertical-theme
                             :buffers {
                                      :layout_strategy big-vertical-theme.layout_strategy
                                      :layout_config big-vertical-theme.layout_config
@@ -74,11 +75,12 @@
 (util.nnoremap :ff (.. builtin-prefix "find_files()"))
 (util.nnoremap :fg (.. builtin-prefix "live_grep()"))
 (util.nnoremap :fb (.. builtin-prefix "buffers()"))
+(util.nnoremap :fm (.. builtin-prefix "marks()"))
 (util.nnoremap :fh (.. builtin-prefix "help_tags()"))
 (util.nnoremap :ch (.. builtin-prefix "command_history()"))
 (util.nnoremap :fc (.. builtin-prefix "commands()"))
 (util.nnoremap :fq (.. builtin-prefix "search_history()"))
 (util.nnoremap :/ (.. builtin-prefix "current_buffer_fuzzy_find()"))
-(util.nnoremap :fm "Telescope file_browser path=%:p:h")
+;; (util.nnoremap :fm "Telescope file_browser path=%:p:h")
 
   

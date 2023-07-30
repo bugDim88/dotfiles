@@ -31,6 +31,8 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 
+set viminfo='100,n$HOME/.vim/files/info/viminfo
+
 "# remap $MYVIMRC
 let $MYVIMRC="~/dotfiles/.vimrc"
 
@@ -98,7 +100,7 @@ set nowrapscan
 "##########################
 "# color settings         #
 "##########################
-colorscheme PaperColor
+colorscheme catppuccin
 set background=dark
 
 "##########################
@@ -234,7 +236,7 @@ nnoremap <leader>cl 0yt=f=a<C-r>=<C-r>"<CR><Esc>
 "#################################
 "# c++                           #  
 "#################################
-nnoremap <C-c> :!g++ % -o  %:r.out && ./%:r.out<CR>
+nnoremap <C-c> :w \| !g++ % -o  %:r.out && ./%:r.out<CR>
 
 "#################################
 "# terminal mode mappings        #  

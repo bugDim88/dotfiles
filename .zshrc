@@ -56,7 +56,7 @@ export EDITOR='nvim'
 
 # help commands start
 alias vim=nvim
-alias v=vim
+alias v=nvim
 alias s='source ~/.zshrc'
 
 alias rangercd='. ranger'
