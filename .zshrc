@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="/usr/local/opt/node@12/bin:$PATH"
