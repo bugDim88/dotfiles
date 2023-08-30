@@ -100,7 +100,7 @@ set nowrapscan
 "##########################
 "# color settings         #
 "##########################
-colorscheme catppuccin
+colorscheme PaperColor
 set background=dark
 
 "##########################
@@ -242,3 +242,4 @@ nnoremap <C-c> :w \| !g++ % -o  %:r.out && ./%:r.out<CR>
 "# terminal mode mappings        #  
 "#################################
 :tnoremap <Esc> <C-\><C-n>
+
