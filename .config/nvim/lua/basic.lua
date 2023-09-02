@@ -20,12 +20,12 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-scripts/textutil.vim'
 Plug 'vimwiki/vimwiki'
 
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'airblade/vim-gitgutter'
 
 -- Colorschemes
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug 'folke/tokyonight.nvim'
+Plug 'NLKNguyen/papercolor-theme'
 
 
 -- Telescope and it's deps

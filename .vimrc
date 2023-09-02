@@ -98,12 +98,6 @@ set wildmode=full
 set nowrapscan
 
 "##########################
-"# color settings         #
-"##########################
-colorscheme PaperColor
-set background=dark
-
-"##########################
 "# fzf settings           #
 "##########################
 set rtp+=/usr/local/opt/fzf
