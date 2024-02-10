@@ -20,6 +20,9 @@
 
     (map :<leader>br "lua vim.lsp.buf.rename()")
     (map :<leader>cf "lua vim.lsp.buf.formatting()")))
+;; EXAMPLE https://github.com/rafaeldelboni/cajus-nvim/blob/main/.config/nvim/fnl/config/plugin/lspconfig.fnl
+;; To add support to more language servers check:
+;; https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
 ;; Clojure
 (lsp.clojure_lsp.setup {:on_attach on-attach})

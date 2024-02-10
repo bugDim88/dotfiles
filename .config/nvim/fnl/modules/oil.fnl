@@ -9,9 +9,11 @@
   {:keymaps
    {:th actions.toggle_hidden
     :<Tab> actions.preview
-    :<Leader>v actions.select_vsplit
-    :h actions.parent
-    :l actions.select
+    :<C-v> actions.select_vsplit
+    :<C-t> actions.select_tab
+    :<C-h> actions.parent
+    :<C-l> actions.select
+    :zh actions.toggle_hidden
     :cwd actions.open_cwd
     :cd actions.cd
     :tcd actions.tcd

@@ -44,4 +44,10 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'stevearc/oil.nvim'
 Plug 'bugDim88/presenting.vim'
+
+-- Dart
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
 vim.call('plug#end')

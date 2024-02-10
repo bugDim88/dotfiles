@@ -9,6 +9,11 @@ alias java8='unset JAVA_HOME;export JAVA_HOME=$JAVA_8_HOME;export PATH=$JAVA_HOM
 alias java11='unset JAVA_HOME;export JAVA_HOME=$JAVA_11_HOME;export PATH=$JAVA_HOME/bin:$PATH'
 alias java16='unset JAVA_HOME;export JAVA_HOME=$JAVA_16_HOME;export PATH=$JAVA_HOME/bin:$PATH'
 
+function set_java() { 
+    java_path=$1
+    unset JAVA_HOME;export JAVA_HOME=$java_path;export PATH=$JAVA_HOME/bin:$PATH
+}
+
 # default to Java 11
 java11
 
@@ -90,6 +95,8 @@ function ranger(){
     command rm -f -- "$tempfile" 2>/dev/null
 }
 
+DISABLE_UNTRACKED_FILES_DIRTY="true" 
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -114,12 +121,16 @@ export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/tools/bin:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+export NODE_OPTIONS='--openssl-legacy-provider npm run watch'
+# export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="$HOME/Development/flutter/bin:$PATH"
 export PATH="/usr/local/bin/python:$PATH"
 export PATH="$HOME/dotfiles/scripts/bin:$PATH"
 export PATH="$HOME/Development/neovide/target/release:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 source "$HOME/dotfiles/scripts/staros_media_scripts"
+
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm

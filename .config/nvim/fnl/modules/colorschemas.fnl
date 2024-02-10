@@ -18,5 +18,5 @@
                    })
 
 (tokyonight.setup {
-                   :transparent true
+                   ;;:transparent true
                    })

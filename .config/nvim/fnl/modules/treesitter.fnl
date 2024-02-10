@@ -5,4 +5,5 @@
     (ts.setup
       {:indent {:enable true}
        :highlight {:enable true
+                   :disable ["dart"]
                    :additional_vim_regex_highlighting false}})))

@@ -27,7 +27,14 @@
                                }
                   :pickers {
                             :find_files big-vertical-theme
-                            :live_grep big-vertical-theme
+                            :live_grep {
+                                         :layout_strategy "vertical"
+                                         :layout_config {
+                                                        :preview_cutoff 0
+                                                        :height  0.95
+                                                        :width  0.9
+                                                         }
+                                        }
                             :current_buffer_fuzzy_find big-vertical-theme
                             :marks big-vertical-theme
                             :buffers {
