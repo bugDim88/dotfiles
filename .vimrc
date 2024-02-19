@@ -2,7 +2,7 @@
 "# vimwiki settings              #  
 "#################################
 "# set paht for index
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/wiki'}]
+let g:vimwiki_list = [{'path': '$HOME/notes/wiki'}]
 "# set extension to .md
 let g:vimwiki_ext = '.md' 
 "# make sure vimwiki doesn't own all .md files
